@@ -21,7 +21,8 @@
         "sensio/framework-extra-bundle": "~3.0,>=3.0.2",
         "incenteev/composer-parameter-handler": "~2.0",
         "behat/behat": "3.0.x-dev",
-        "behat/behat-bundle": "v1.0.0"
+        "behat/behat-bundle": "v1.0.0",
+        "behat/symfony2-extension": "2.0.x-dev"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"

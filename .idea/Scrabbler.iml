@@ -5,6 +5,7 @@
       <excludeFolder url="file://$MODULE_DIR$/scrabbler/vendor/behat/behat" />
       <excludeFolder url="file://$MODULE_DIR$/scrabbler/vendor/behat/behat-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/scrabbler/vendor/behat/gherkin" />
+      <excludeFolder url="file://$MODULE_DIR$/scrabbler/vendor/behat/symfony2-extension" />
       <excludeFolder url="file://$MODULE_DIR$/scrabbler/vendor/behat/transliterator" />
       <excludeFolder url="file://$MODULE_DIR$/scrabbler/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/scrabbler/vendor/doctrine/annotations" />
@@ -70,6 +71,7 @@
           <root url="file://$MODULE_DIR$/scrabbler/vendor/jdorn/sql-formatter" />
           <root url="file://$MODULE_DIR$/scrabbler/vendor/kriswallsmith/assetic" />
           <root url="file://$MODULE_DIR$/scrabbler/vendor/behat/behat" />
+          <root url="file://$MODULE_DIR$/scrabbler/vendor/behat/symfony2-extension" />
           <root url="file://$MODULE_DIR$/scrabbler/vendor/psr/log" />
           <root url="file://$MODULE_DIR$/scrabbler/vendor/symfony/symfony" />
           <root url="file://$MODULE_DIR$/scrabbler/vendor/sensio/framework-extra-bundle" />
@@ -102,6 +104,7 @@
           <root url="file://$MODULE_DIR$/scrabbler/vendor/jdorn/sql-formatter" />
           <root url="file://$MODULE_DIR$/scrabbler/vendor/kriswallsmith/assetic" />
           <root url="file://$MODULE_DIR$/scrabbler/vendor/behat/behat" />
+          <root url="file://$MODULE_DIR$/scrabbler/vendor/behat/symfony2-extension" />
           <root url="file://$MODULE_DIR$/scrabbler/vendor/psr/log" />
           <root url="file://$MODULE_DIR$/scrabbler/vendor/symfony/symfony" />
           <root url="file://$MODULE_DIR$/scrabbler/vendor/sensio/framework-extra-bundle" />
