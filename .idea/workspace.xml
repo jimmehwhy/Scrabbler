@@ -2,27 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="693967cb-3791-428c-b260-3b01898e0408" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scrabbler/src/AppBundle/Model/WordsModel.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scrabbler/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scrabbler/.idea/frameworkRootSettings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scrabbler/src/AppBundle/Resources/views/Default/index.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scrabbler/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scrabbler/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/php.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scrabbler/.idea/php.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scrabbler/.idea/scopes/scope_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scrabbler/.idea/scrabbler.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scrabbler/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scrabbler/src/AppBundle/Resources/views/Default/wordlist.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scrabbler/.idea/workspace.xml" />
-      <change type="DELETED" beforePath="C:\wamp\www\Scrabbler\scrabbler\app\Resources\views\default\index.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\Scrabbler\scrabbler\app\cache\.gitkeep" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scrabbler/src/AppBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/scrabbler/src/AppBundle/Controller/DefaultController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scrabbler/web/app_dev.php" afterPath="$PROJECT_DIR$/scrabbler/web/app_dev.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scrabbler/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/scrabbler/app/Resources/views/base.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scrabbler/app/config/routing.yml" afterPath="$PROJECT_DIR$/scrabbler/app/config/routing.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scrabbler/src/AppBundle/Model/WordsModel.php" afterPath="$PROJECT_DIR$/scrabbler/src/AppBundle/Model/WordsModel.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Scrabbler.iws" />
@@ -77,8 +57,8 @@
       <file leaf-file-name="WordsModel.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scrabbler/src/AppBundle/Model/WordsModel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.20264901" vertical-offset="0" max-vertical-offset="755">
-              <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+            <state vertical-scroll-proportion="0.7298013" vertical-offset="146" max-vertical-offset="935">
+              <caret line="46" column="48" selection-start-line="46" selection-start-column="48" selection-end-line="46" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -153,9 +133,9 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="400" />
+    <option name="x" value="707" />
     <option name="y" value="29" />
-    <option name="width" value="1365" />
+    <option name="width" value="1058" />
     <option name="height" value="940" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -486,8 +466,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="400" y="29" width="1365" height="940" extended-state="0" />
-    <editor active="false" />
+    <frame x="707" y="29" width="1058" height="940" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919255" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3275649" sideWeight="0.49958017" order="7" side_tool="false" content_ui="tabs" />
@@ -496,7 +476,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24937028" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24750958" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3236473" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.49958438" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32880098" sideWeight="0.49958017" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -748,8 +728,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scrabbler/src/AppBundle/Model/WordsModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20264901" vertical-offset="0" max-vertical-offset="755">
-          <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.7298013" vertical-offset="146" max-vertical-offset="935">
+          <caret line="46" column="48" selection-start-line="46" selection-start-column="48" selection-end-line="46" selection-end-column="48" />
           <folding />
         </state>
       </provider>
