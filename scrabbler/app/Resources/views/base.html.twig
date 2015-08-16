@@ -2,12 +2,25 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}Scrabbler!{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
-        {% block body %}{% endblock %}
+    <div id="wrapper">
+        <div id="container">
+            <h1>Welcome to Scrabbler!</h1>
+            <p>
+                Enter text and click the button.</br>
+                {{ form_start(form) }}
+                {{ form_widget(form) }}
+                {{ form_end(form) }}
+            </p>
+            <p>
+                {% block wordlist %}{% endblock %}
+            </p>
+        </div>
+    </div>
         {% block javascripts %}{% endblock %}
     </body>
 </html>

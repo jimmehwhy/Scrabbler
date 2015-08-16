@@ -5,7 +5,7 @@
       <paths name="Apache">
         <serverdata>
           <mappings>
-            <mapping local="$PROJECT_DIR$" web="scrabbler" />
+            <mapping local="$PROJECT_DIR$/scrabbler" web="" />
           </mappings>
         </serverdata>
       </paths>

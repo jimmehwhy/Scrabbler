@@ -1,0 +1,13 @@
+{% extends "base.html.twig" %}
+
+{% block wordlist %}
+
+Thankyou! Here is your feed back
+You gave "{{ letters }}" <br>
+You got <br/>
+{% for word in words %}
+      {{ word }} <br/>
+{% endfor %}
+
+{%  endblock %}
+

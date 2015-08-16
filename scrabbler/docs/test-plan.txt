@@ -1,0 +1,11 @@
+behat tests
+i can access page
+i can input letters, i can view respnce
+i can see progress
+
+unit tests
+input validator
+	only allows letters
+	no script
+model
+	correctly gets words
