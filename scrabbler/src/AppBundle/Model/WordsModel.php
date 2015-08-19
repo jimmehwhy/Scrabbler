@@ -18,38 +18,91 @@ class WordsModel {
     }
 
     public function getWords($letters){
-        //var_dump("In model");
         $this->letters = $letters;
 
         $chars = str_split($letters);
-        //var_dump($chars);
 
-        $this->words = $this->permutations($chars, count($chars) -1);
-        //var_dump($this->words);
+        $this->words = array();
+        if(count($chars) < 7)
+        $this->words = $this->combinations($chars);
+
+        sort($this->words);
 
         return $this->words;
     }
 
-    function permutations($chars, $size, $combinations = array()){
-        if(empty($combinations)){
-            $combinations = $chars;
+    function combinations($letters, $words = null, $thisWord = null){
+        if(count($letters) == 0){
+            return $words;
         }
 
-        if($size == 1){
-            return $combinations;
+        if(empty($thisWord)){
+            $thisWord = '';
         }
 
-        $new_combinations = array();
+//        foreach($letters as $l_index => $a_letter){
+//            $new_letters = $letters;
+//
+//            unset($new_letters[$l_index]);
+//            $new_letters = array_values($new_letters);
+//
+//            if(empty($words)){
+//                $thisWord = $a_letter;
+//            } else {
+//                $thisWord = $thisWord . $a_letter;
+//            }
+//
+//            $words[] = $thisWord;
+//
+//
+//            $words = $this->combinations($new_letters, $words, $thisWord);
+//
+//            if(empty($words)){
+//                $thisWord = '';
+//            } else {
+//                $thisWord = substr($thisWord, 0, count($thisWord));
+//            }
+//
+//        }
 
-        # loop through existing combinations and character set to create strings
-        foreach ($combinations as $combination) {
-            foreach ($chars as $char) {
-                //TODO needs a braking mechanism
-                $new_combinations[] = $combination . $char;
+
+
+        if(empty($words)){
+            //first set of words are letters
+            foreach($letters as $l_index => $a_letter){
+                $new_letters = $letters;
+
+                unset($new_letters[$l_index]);
+                $new_letters = array_values($new_letters);
+
+                $thisWord = $a_letter;
+                $words[] = $thisWord;
+                $words = $this->combinations($new_letters, $words, $thisWord);
+                $thisWord = '';
+            }
+
+            //after creating all words, for each letter, return them
+            return $words;
+        }
+        else {
+            foreach ($letters as $l_index => $a_letter) {
+                $new_letters = $letters;
+
+                unset($new_letters[$l_index]);
+                $new_letters = array_values($new_letters);
+
+                $thisWord = $thisWord . $a_letter;
+                $words[] = $thisWord;
+
+                $words = $this->combinations($new_letters, $words, $thisWord);
+                $thisWord = substr($thisWord, 0, count($thisWord));
             }
         }
 
-        # call same function again for the next iteration
-        return $this->permutations($chars, $size - 1, $new_combinations);
+        return $words;
+    }
+
+    private function addLetter($letter){
+
     }
 }
