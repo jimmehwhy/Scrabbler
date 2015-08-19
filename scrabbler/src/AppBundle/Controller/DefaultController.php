@@ -38,7 +38,7 @@ class DefaultController extends Controller
             //var_dump($data);
             //var_dump($words);
 
-            return $this->render('AppBundle:Default:wordlist.html.twig', array('form' => $form->createView(), 'letters' => $letters, 'words' => $words));
+            return $this->render('AppBundle:Default:wordlist.html.twig', array('form' => $form->createView(), 'letters' => $letters, 'words' => $words, 'count' => count($words)));
         }
 
         return $this->render('AppBundle:Default:index.html.twig', array('form' => $form->createView()));

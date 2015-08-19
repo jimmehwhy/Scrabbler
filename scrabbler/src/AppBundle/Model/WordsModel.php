@@ -26,6 +26,7 @@ class WordsModel {
         if(count($chars) < 7)
         $this->words = $this->combinations($chars);
 
+        $this->words = $this->checkedWords($this->words);
         sort($this->words);
 
         return $this->words;
@@ -98,6 +99,12 @@ class WordsModel {
                 $thisWord = $oldWord;
             }
         }
+
+        return $words;
+    }
+
+    private function checkedWords($words){
+        //check words in dictionary
 
         return $words;
     }
