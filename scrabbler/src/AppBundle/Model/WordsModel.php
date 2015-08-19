@@ -90,19 +90,15 @@ class WordsModel {
 
                 unset($new_letters[$l_index]);
                 $new_letters = array_values($new_letters);
-
+                $oldWord = $thisWord;
                 $thisWord = $thisWord . $a_letter;
                 $words[] = $thisWord;
 
                 $words = $this->combinations($new_letters, $words, $thisWord);
-                $thisWord = substr($thisWord, 0, count($thisWord));
+                $thisWord = $oldWord;
             }
         }
 
         return $words;
-    }
-
-    private function addLetter($letter){
-
     }
 }
