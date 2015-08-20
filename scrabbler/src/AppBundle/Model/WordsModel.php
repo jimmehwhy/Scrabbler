@@ -17,6 +17,8 @@ class WordsModel {
         $this->words = array();
     }
 
+
+
     public function getWords($letters){
         $this->letters = $letters;
 
@@ -24,11 +26,14 @@ class WordsModel {
 
         $words = array();
 
-        if(count($chars) < 7)
+        if(count($chars) < 9)
         $words = $this->combinations($chars);
 
         $words = $this->checkedWords($words);
-        sort($words);
+
+        usort($words, function($a, $b) {
+            return strlen($b) - strlen($a);
+        });
 
         $this->words = $words;
 
@@ -106,9 +111,34 @@ class WordsModel {
         return $words;
     }
 
+    //shit search. algorythm needs to be optimised
+    //TODO binary search
     private function checkedWords($words){
         //check words in dictionary
+        $checkedWords = array();
+        $dict = [];
 
-        return $words;
+        $file = fopen('C:\wamp\www\Scrabbler\scrabbler\src\AppBundle\Resources\Dictionary\dictionary', 'r');
+        $fread = fread($file, filesize('C:\wamp\www\Scrabbler\scrabbler\src\AppBundle\Resources\Dictionary\dictionary'));
+
+        $split = explode("\n", $fread);
+        $array[] = null;
+
+        foreach ($split as $string)
+        {
+            $string = str_replace(array("\r", "\n"), '', $string);
+            array_push($dict,$string);
+        }
+
+        foreach($words as $word){
+            if(strlen($word) > 2) {
+                if (in_array($word, $dict)) {
+                    $checkedWords[] = $word;
+                }
+            }
+
+        }
+
+        return $checkedWords;
     }
 }
