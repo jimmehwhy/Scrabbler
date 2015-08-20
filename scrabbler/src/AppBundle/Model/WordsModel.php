@@ -22,12 +22,15 @@ class WordsModel {
 
         $chars = str_split($letters);
 
-        $this->words = array();
-        if(count($chars) < 7)
-        $this->words = $this->combinations($chars);
+        $words = array();
 
-        $this->words = $this->checkedWords($this->words);
-        sort($this->words);
+        if(count($chars) < 7)
+        $words = $this->combinations($chars);
+
+        $words = $this->checkedWords($words);
+        sort($words);
+
+        $this->words = $words;
 
         return $this->words;
     }
