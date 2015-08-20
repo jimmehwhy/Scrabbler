@@ -18,7 +18,6 @@ class DefaultController extends Controller
      */
     public function indexAction(Request $request)
     {
-        $word = "word";
         $form = $this->createFormBuilder()
             ->add('letters', 'text')
             ->add('submit', 'submit', array('label' => 'Generate words'))
@@ -38,10 +37,26 @@ class DefaultController extends Controller
             //var_dump($data);
             //var_dump($words);
 
-            return $this->render('AppBundle:Default:wordlist.html.twig', array('form' => $form->createView(), 'letters' => $letters, 'words' => $words));
+            return $this->render('AppBundle:Default:wordlist.html.twig', array('form' => $form->createView(), 'letters' => $letters, 'words' => $words, 'count' => count($words)));
         }
 
         return $this->render('AppBundle:Default:index.html.twig', array('form' => $form->createView()));
+    }
+
+    /**
+     * @Route("/{letters}", name="wordrequest")
+     */
+    public function listAction($letters)
+    {
+        $form = $this->createFormBuilder()
+            ->add('letters', 'text')
+            ->add('submit', 'submit', array('label' => 'Generate words'))
+            ->getForm();
+
+        $model = new WordsModel();
+        $words = $model->getWords($letters);
+
+        return $this->render('AppBundle:Default:wordlist.html.twig', array('form'=> $form->createView(), 'letters' => $letters,'words' => $words, 'count' => count($words)));
     }
 
 }

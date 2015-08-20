@@ -18,11 +18,97 @@ class WordsModel {
     }
 
     public function getWords($letters){
-        //var_dump("In model");
         $this->letters = $letters;
 
-        $this->words = array('and', 'an', 'am', 'dam', 'mad');
+        $chars = str_split($letters);
+
+        $words = array();
+
+        if(count($chars) < 7)
+        $words = $this->combinations($chars);
+
+        $words = $this->checkedWords($words);
+        sort($words);
+
+        $this->words = $words;
 
         return $this->words;
+    }
+
+    function combinations($letters, $words = null, $thisWord = null){
+        if(count($letters) == 0){
+            return $words;
+        }
+
+        if(empty($thisWord)){
+            $thisWord = '';
+        }
+
+//        foreach($letters as $l_index => $a_letter){
+//            $new_letters = $letters;
+//
+//            unset($new_letters[$l_index]);
+//            $new_letters = array_values($new_letters);
+//
+//            if(empty($words)){
+//                $thisWord = $a_letter;
+//            } else {
+//                $thisWord = $thisWord . $a_letter;
+//            }
+//
+//            $words[] = $thisWord;
+//
+//
+//            $words = $this->combinations($new_letters, $words, $thisWord);
+//
+//            if(empty($words)){
+//                $thisWord = '';
+//            } else {
+//                $thisWord = substr($thisWord, 0, count($thisWord));
+//            }
+//
+//        }
+
+
+
+        if(empty($words)){
+            //first set of words are letters
+            foreach($letters as $l_index => $a_letter){
+                $new_letters = $letters;
+
+                unset($new_letters[$l_index]);
+                $new_letters = array_values($new_letters);
+
+                $thisWord = $a_letter;
+                $words[] = $thisWord;
+                $words = $this->combinations($new_letters, $words, $thisWord);
+                $thisWord = '';
+            }
+
+            //after creating all words, for each letter, return them
+            return $words;
+        }
+        else {
+            foreach ($letters as $l_index => $a_letter) {
+                $new_letters = $letters;
+
+                unset($new_letters[$l_index]);
+                $new_letters = array_values($new_letters);
+                $oldWord = $thisWord;
+                $thisWord = $thisWord . $a_letter;
+                $words[] = $thisWord;
+
+                $words = $this->combinations($new_letters, $words, $thisWord);
+                $thisWord = $oldWord;
+            }
+        }
+
+        return $words;
+    }
+
+    private function checkedWords($words){
+        //check words in dictionary
+
+        return $words;
     }
 }
